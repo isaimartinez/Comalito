@@ -5,6 +5,9 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
+//  ============= PICs =============
+import morro from '../../assets/portada.jpeg'
+
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
   ${DesktopNavLinks} ${NavLink}, ${LogoLink} {
@@ -18,7 +21,7 @@ const StyledHeader = styled(Header)`
 const PrimaryLink = tw(PrimaryLinkBase)`rounded-full`
 const Container = styled.div`
   ${tw`relative -mx-8 -mt-8 bg-center bg-cover h-screen min-h-144`}
-  background-image: url("https://images.unsplash.com/photo-1536300007881-7e482242baa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=80");
+  background-image: url(${morro});
 `;
 
 const OpacityOverlay = tw.div`z-10 absolute inset-0 bg-black opacity-75`;
@@ -39,23 +42,19 @@ export default () => {
   const navLinks = [
     <NavLinks key={1}>
       <NavLink href="#">
-        About
+        Sobre Nosotros
       </NavLink>
       <NavLink href="#">
         Blog
       </NavLink>
       <NavLink href="#">
-        Locations
+        Preguntas Frecuentes
       </NavLink>
       <NavLink href="#">
-        Pricing
+        Contacto
       </NavLink>
     </NavLinks>,
-    <NavLinks key={2}>
-      <PrimaryLink href="/#">
-        Hire Us
-      </PrimaryLink>
-    </NavLinks>
+    
   ];
 
   return (
@@ -65,11 +64,9 @@ export default () => {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-              Book Music & Comedy Events
-              <br />
-              anywhere in New York
+            Espacio Cultural Comunitario
           </Heading>
-          <PrimaryAction>Search Events Near Me</PrimaryAction>
+          {/* <PrimaryAction>Search Events Near Me</PrimaryAction> */}
         </Content>
       </HeroContainer>
     </Container>

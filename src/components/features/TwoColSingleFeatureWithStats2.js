@@ -2,10 +2,10 @@ import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
-import StatsIllustrationSrc from "images/stats-illustration.svg";
-import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
+import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.js";
+import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js";
+import StatsIllustrationSrc from "../../images/stats-illustration.svg";
+import { ReactComponent as SvgDotPattern } from "../../images/dot-pattern.svg";
 
 const Container = tw.div`relative`;
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -46,7 +46,7 @@ export default ({
       We have been doing this <wbr /> since <span tw="text-primary-500">1999.</span>
     </>
   ),
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+  description = "Somos una red comunitaria que promueve el sano esparcimiento de niños y adolescentes para la generación de acentes de cambio a través de actividades culturales.",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "https://timerse.com",
   imageSrc = StatsIllustrationSrc,
@@ -61,18 +61,18 @@ export default ({
   // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
   //Change the statistics variable as you like, add or delete objects
   const defaultStatistics = [
-    {
-      key: "Clients",
-      value: "2282+"
-    },
-    {
-      key: "Projects",
-      value: "3891+"
-    },
-    {
-      key: "Awards",
-      value: "1000+"
-    }
+    // {
+    //   key: "Clients",
+    //   value: "2282+"
+    // },
+    // {
+    //   key: "Projects",
+    //   value: "3891+"
+    // },
+    // {
+    //   key: "Awards",
+    //   value: "1000+"
+    // }
   ];
 
   if (!statistics) statistics = defaultStatistics;
@@ -89,17 +89,6 @@ export default ({
             {subheading && <Subheading>{subheading}</Subheading>}
             <Heading>{heading}</Heading>
             <Description>{description}</Description>
-            <Statistics>
-              {statistics.map((statistic, index) => (
-                <Statistic key={index}>
-                  <Value>{statistic.value}</Value>
-                  <Key>{statistic.key}</Key>
-                </Statistic>
-              ))}
-            </Statistics>
-            <PrimaryButton as="a" href={primaryButtonUrl}>
-              {primaryButtonText}
-            </PrimaryButton>
           </TextContent>
         </TextColumn>
       </TwoColumn>

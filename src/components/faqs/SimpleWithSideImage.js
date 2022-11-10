@@ -7,6 +7,11 @@ import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.j
 import { ReactComponent as PlusIcon } from "feather-icons/dist/icons/plus.svg";
 import { ReactComponent as MinusIcon } from "feather-icons/dist/icons/minus.svg";
 
+// =============== PICS ===============
+import faq from '../../assets/faq.jpeg'
+
+
+
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
 
@@ -39,9 +44,9 @@ const Answer = motion(tw.dd`pointer-events-none text-sm sm:text-base leading-rel
 
 export default ({
   subheading = "",
-  heading = "Questions",
-  description = "Here are some frequently asked questions about our hotels from our loving customers. Should you have any other questions, feel free to reach out via the contact form below.",
-  imageSrc = "https://images.unsplash.com/photo-1579427421635-a0015b804b2e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1024&q=80",
+  heading = "Preguntas Frecuentes",
+  description = "Aquí hay algunas preguntas frecuentes sobre nuestros. Si tienes alguna otra pregunta, no dudes en comunicarte a través de nuestras redes sociales",
+  imageSrc = faq,
   imageContain = false,
   imageShadow = true,
   faqs = null
@@ -52,25 +57,15 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Is lunch provided free of cost ?",
+      question: "Qué es la perspectiva sustentable del comalito?",
       answer:
-        "Yes, it is, if you have a membership with us. Otherwise it is charged as per the menu. Some limits do apply as to how much items can be included in your lunch. This limit is enough for any one person and merely exists to discourage abusal of the system."
+        "El comalito integra la sustantibilidad como eje rector en los proyectos, lo que implica que el ámbito social, ambiental y económico son igual de importantes."
     },
     {
-      question: "Do you have 2 Bedroom suites ?",
+      question: "Cual es la Aportacion a la Sociedad de El Comalito?",
       answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        "El Comalito está comprometido con la oferta cultural accesible y gratuita en el municipio de Qro."
     },
-    {
-      question: "Are Wi-Fi costs included in the price ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    },
-    {
-      question: "Where can I reach you for support ?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    }
   ];
 
   if (!faqs || faqs.length === 0) faqs = defaultFaqs;
