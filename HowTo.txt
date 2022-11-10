@@ -1,0 +1,6 @@
+npm i twin.macro
+npm i framer-motion   
+npm i styled-components
+npm i @emotion/styled
+@emotion/react
+feather-icons
