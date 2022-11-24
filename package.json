@@ -1,6 +1,7 @@
 {
   "name": "comalito",
   "version": "0.1.0",
+  "homepage": "http://elcomalitocultural.org/test/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
