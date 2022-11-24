@@ -2,13 +2,33 @@ import React, { useState } from "react";
 import Slider from "react-slick";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { SectionHeading } from "components/misc/Headings";
-import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons";
+import { SectionHeading } from "../misc/Headings";
+import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons";
 import { ReactComponent as PriceIcon } from "feather-icons/dist/icons/dollar-sign.svg";
 import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
 import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
 import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
 import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
+
+
+
+// ============== Pics ==============
+
+import m1 from '../../assets/mem-1.jpeg'
+import m2 from '../../assets/mem-2.jpeg'
+import m3 from '../../assets/mem-3.jpeg'
+import m4 from '../../assets/mem-4.jpeg'
+import m5 from '../../assets/mem-5.jpeg'
+import m6 from '../../assets/mem-6.jpeg'
+import m7 from '../../assets/mem-7.jpeg'
+import m8 from '../../assets/mem-8.jpeg'
+import m9 from '../../assets/mem-9.jpeg'
+import m10 from '../../assets/mem-10.jpeg'
+import m11 from '../../assets/mem-11.jpeg'
+import m12 from '../../assets/mem-12.jpeg'
+import m13 from '../../assets/mem-13.jpeg'
+import m14 from '../../assets/mem-14.jpeg'
+import m15 from '../../assets/mem-15.jpeg'
 
 const Container = tw.div`relative`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
@@ -28,16 +48,16 @@ const NextButton = tw(ControlButton)``;
 const CardSlider = styled(Slider)`
   ${tw`mt-16`}
   .slick-track { 
-    ${tw`flex`}
+    ${tw`flex gap-2`}
   }
   .slick-slide {
-    ${tw`h-auto flex justify-center mb-1`}
+    ${tw`h-auto flex items-center justify-center mb-1`}
   }
 `;
-const Card = tw.div`h-full flex! flex-col sm:border max-w-sm sm:rounded-tl-4xl sm:rounded-br-5xl relative focus:outline-none`;
+const Card = tw.div`h-96 flex! flex-col sm:border sm:rounded-tl-4xl sm:rounded-br-5xl relative focus:outline-none`;
 const CardImage = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
-  tw`w-full h-56 sm:h-64 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`
+  tw`w-80 h-96 sm:h-64 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`
 ]);
 
 const TextInfo = tw.div`py-6 sm:px-10 sm:py-6`;
@@ -91,44 +111,57 @@ export default () => {
   /* Change this according to your needs */
   const cards = [
     {
-      imageSrc: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Wyatt Residency",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Rome, Italy",
-      pricingText: "USD 39/Day",
-      rating: "4.8",
+      imageSrc: m1,
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Soho Paradise",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Ibiza, Spain",
-      pricingText: "USD 50/Day",
-      rating: 4.9,
+      imageSrc: m2,
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1549294413-26f195200c16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Hotel Baja",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Palo Alto, CA",
-      pricingText: "USD 19/Day",
-      rating: "5.0",
+      imageSrc: m3,
     },
     {
-      imageSrc: "https://images.unsplash.com/photo-1571770095004-6b61b1cf308a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&h=1024&w=768&q=80",
-      title: "Hudak Homes",
-      description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
-      locationText: "Arizona, RAK",
-      pricingText: "USD 99/Day",
-      rating: 4.5,
+      imageSrc: m4,
+    },
+    {
+      imageSrc: m5,
+    },
+    {
+      imageSrc: m6,
+    },
+    {
+      imageSrc: m7,
+    },
+    {
+      imageSrc: m8,
+    },
+    {
+      imageSrc: m9,
+    },
+    {
+      imageSrc: m10,
+    },
+    {
+      imageSrc: m11,
+    },
+    {
+      imageSrc: m12,
+    },
+    {
+      imageSrc: m13,
+    },
+    {
+      imageSrc: m14,
+    },
+    {
+      imageSrc: m15,
     },
   ]
 
   return (
-    <Container>
+    <Container id="memorias">
       <Content>
         <HeadingWithControl>
-          <Heading>Popular Hotels</Heading>
+          <Heading >Memorias de Trabajo</Heading>
           <Controls>
             <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
             <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
@@ -136,34 +169,13 @@ export default () => {
         </HeadingWithControl>
         <CardSlider ref={setSliderRef} {...sliderSettings}>
           {cards.map((card, index) => (
-            <Card key={index}>
-              <CardImage imageSrc={card.imageSrc} />
-              <TextInfo>
-                <TitleReviewContainer>
-                  <Title>{card.title}</Title>
-                  <RatingsInfo>
-                    <StarIcon />
-                    <Rating>{card.rating}</Rating>
-                  </RatingsInfo>
-                </TitleReviewContainer>
-                <SecondaryInfoContainer>
-                  <IconWithText>
-                    <IconContainer>
-                      <LocationIcon />
-                    </IconContainer>
-                    <Text>{card.locationText}</Text>
-                  </IconWithText>
-                  <IconWithText>
-                    <IconContainer>
-                      <PriceIcon />
-                    </IconContainer>
-                    <Text>{card.pricingText}</Text>
-                  </IconWithText>
-                </SecondaryInfoContainer>
-                <Description>{card.description}</Description>
-              </TextInfo>
-              <PrimaryButton>Book Now</PrimaryButton>
-            </Card>
+            // <Card key={index}>
+            //   <CardImage imageSrc={card.imageSrc} />
+              
+            // </Card>
+            <div className="flex w-72 h-72 rounded items-center justify-center" key={index}>
+              <img src={card.imageSrc} className="rounded"/>
+            </div>
           ))}
         </CardSlider>
       </Content>

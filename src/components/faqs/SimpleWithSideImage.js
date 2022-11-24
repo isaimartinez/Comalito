@@ -57,14 +57,24 @@ export default ({
    */
   const defaultFaqs = [
     {
-      question: "Qué es la perspectiva sustentable del comalito?",
+      question: "¿Qué es la Comunidad Cultural El Comalito A.C.?",
       answer:
-        "El comalito integra la sustantibilidad como eje rector en los proyectos, lo que implica que el ámbito social, ambiental y económico son igual de importantes."
+        "El Comalito es una red comunitaria que promueve el sano esparcimiento de niños, niñas y adolescentes para la generación de agentes de cambio a través de actividades culturales gratuitos, desde una perspectiva de sustentabilidad."
     },
     {
-      question: "Cual es la Aportacion a la Sociedad de El Comalito?",
+      question: "¿Cuál es la perspectiva de Sustentabilidad?",
       answer:
-        "El Comalito está comprometido con la oferta cultural accesible y gratuita en el municipio de Qro."
+        "En primer lugar, que las acciones sean planificadas evaluando el impacto ambiental, social y económico, al mismo tiempo que los proyectos incidan y se mantengan a mediano o largo plazo mendiante la participación y gestión de la propia comunidad."
+    },
+    {
+      question: "¿A quién se dirigen los talleres y proyectos culturales gratuitos?",
+      answer:
+        "A niñas, niños y adolescentes de zonas periféricas del municipio de Querétaro que cuenten con una oferta cultural limitada."
+    },
+    {
+      question: "¿Cómo puedo apoyar?",
+      answer:
+        "Si eres una Institución Académica, las y los estudiantes pueden liberar su Servicio Social con nosotros. Para las personas físicas y morales tenemos mecanismos para donación de material y/o económica."
     },
   ];
 
@@ -78,7 +88,7 @@ export default ({
   };
 
   return (
-    <Container>
+    <Container id="qa">
       <Content>
         <TwoColumn>
           <Column tw="hidden lg:block w-5/12 flex-shrink-0">

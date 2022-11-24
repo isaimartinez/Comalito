@@ -78,11 +78,10 @@ export default ({
   if (!statistics) statistics = defaultStatistics;
 
   return (
-    <Container>
+    <Container id="nosotros">
       <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
         <ImageColumn css={imageContainerCss}>
-          {imageInsideDiv ? <Image imageSrc={imageSrc} css={imageCss} /> : <img src={imageSrc} css={imageCss} alt="" />}
-          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
+          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCcshDAtu5C8ZK-HB9HwKDyz2Tn1erQGJ0kbBUsrfeQWlzQPL8bsPk9VfimwLhMvdT8ND8LZ76Sh2W/embed?start=true&loop=true&delayms=3000" frameborder="0" width="650" height="380" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
         </ImageColumn>
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>

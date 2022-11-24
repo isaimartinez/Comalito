@@ -94,8 +94,8 @@ export default ({
         <ThreeColumnContainer>
           {cards.map((card, i) => (
             <Column key={i}>
-              <Card href={card.url}>
-                <span className="imageContainer" css={imageContainerCss}>
+              <Card>
+                <span className="imageContainer" style={{backgroundColor: "#FBF9BB"}} css={imageContainerCss}>
                   {card.icon}
                 </span>
                 <span className="title">{card.title}</span>

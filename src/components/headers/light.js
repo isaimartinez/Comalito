@@ -88,8 +88,8 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
 
   const defaultLogoLink = (
     <LogoLink href="/">
-      <img src={logo} alt="logo" style={{width: "150px", height: "150px"}}/>
-      El Comalito
+      {/* <img src={logo} alt="logo" style={{width: "150px", height: "150px"}}/> */}
+      {/* El Comalito */}
     </LogoLink>
   );
 

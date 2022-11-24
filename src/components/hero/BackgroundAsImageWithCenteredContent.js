@@ -7,6 +7,8 @@ import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, Na
 
 //  ============= PICs =============
 import morro from '../../assets/portada.jpeg'
+// import morro from '../../assets/hero.png'
+import logo from "../../assets/logo.png";
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
@@ -41,16 +43,16 @@ const PrimaryAction = tw.button`rounded-full px-8 py-3 mt-10 text-sm sm:text-bas
 export default () => {
   const navLinks = [
     <NavLinks key={1}>
-      <NavLink href="#">
+      <NavLink href="#nosotros">
         Sobre Nosotros
       </NavLink>
-      <NavLink href="#">
-        Blog
+      <NavLink href="#memorias">
+        Memorias de Trabajo
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="#qa">
         Preguntas Frecuentes
       </NavLink>
-      <NavLink href="#">
+      <NavLink href="#contacto">
         Contacto
       </NavLink>
     </NavLinks>,
@@ -64,8 +66,11 @@ export default () => {
         <StyledHeader links={navLinks} />
         <Content>
           <Heading>
-            Espacio Cultural Comunitario
+            EL COMALITO COMUNIDAD CULTURAL A.C.
           </Heading>
+          <div className="w-32 h-32">
+            <img src={logo} alt="" style={{width: "250px", height: "250px"}}/>
+          </div>
           {/* <PrimaryAction>Search Events Near Me</PrimaryAction> */}
         </Content>
       </HeroContainer>

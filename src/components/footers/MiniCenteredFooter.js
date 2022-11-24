@@ -6,10 +6,12 @@ import { ReactComponent as FacebookIcon } from "../../images/facebook-icon.svg";
 import { ReactComponent as TwitterIcon } from "../../images/twitter-icon.svg";
 import { ReactComponent as YoutubeIcon } from "../../images/youtube-icon.svg";
 
+import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
+
 import logo from '../../assets/logo.png'
 
 
-const Container = tw(ContainerBase)`bg-gray-900 text-gray-100 -mx-8 -mb-8`
+const Container = tw(ContainerBase)`bg-primary-700 text-gray-100 -mx-8 -mb-8`
 const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-24`;
 
 const Row = tw.div`flex items-center justify-center flex-col px-8`
@@ -41,20 +43,20 @@ export default () => {
           </LogoContainer>
           <LinksContainer>
             <Link href="#">Home</Link>
-            <Link href="#">Sobre Nosotros</Link>
-            <Link href="#">Blog</Link>
-            <Link href="#">Preguntas Frecuentes</Link>
-            <Link href="#">Contacto</Link>
+            <Link href="#nosotros">Sobre Nosotros</Link>
+            <Link href="#memorias">Memorias de Trabajo</Link>
+            <Link href="#qa">Preguntas Frecuentes</Link>
+            <Link href="#contacto">Contacto</Link>
           </LinksContainer>
           <SocialLinksContainer>
-            <SocialLink href="https://facebook.com">
-              <FacebookIcon />
+            <SocialLink target="_blank" href="https://www.facebook.com/elcomalito.cultural">
+              <FaFacebook />
             </SocialLink>
-            <SocialLink href="https://twitter.com">
-              <TwitterIcon />
+            <SocialLink target="_blank" href="https://instagram.com/comalito.ac?igshid=YmMyMTA2M2Y=">
+              <FaInstagram />
             </SocialLink>
-            <SocialLink href="https://youtube.com">
-              <YoutubeIcon />
+            <SocialLink target="_blank" href="https://www.linkedin.com/in/el-comalito-comunidad-cultural-0456a1250/">
+              <FaLinkedin />
             </SocialLink>
           </SocialLinksContainer>
           <CopyrightText>
