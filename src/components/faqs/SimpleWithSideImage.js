@@ -7,7 +7,8 @@ import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.j
 import {FaPlus, FaMinus} from 'react-icons/fa'
 
 // =============== PICS ===============
-import faq from '../../assets/faq.jpeg'
+// import faq from '../../assets/faq.jpeg'
+import {faq} from '../../assets/index'
 
 
 

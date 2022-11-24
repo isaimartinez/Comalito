@@ -12,7 +12,7 @@ import Footer from "../components/footers/MiniCenteredFooter.js";
 import GlobalStyles from '../styles/GlobalStyles';
 
 // =============== PICS ===============
-import nosotros from '../assets/nosotros.jpeg'
+import {nosotros} from '../assets/'
 import {FaBullseye, FaGem, FaEye} from 'react-icons/fa'
 
 

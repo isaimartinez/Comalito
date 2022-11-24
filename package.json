@@ -1,7 +1,6 @@
 {
   "name": "comalito",
   "version": "0.1.0",
-  "homepage": "http://elcomalitocultural.org/test/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -22,6 +21,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build-localhost": "PUBLIC_URL=/ react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

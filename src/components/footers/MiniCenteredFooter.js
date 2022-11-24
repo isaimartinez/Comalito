@@ -5,7 +5,7 @@ import {Container as ContainerBase } from "../misc/Layouts.js"
 
 import {FaFacebook, FaInstagram, FaLinkedin} from 'react-icons/fa'
 
-import logo from '../../assets/logo.png'
+import {logo} from '../../assets/'
 
 
 const Container = tw(ContainerBase)`bg-primary-700 text-gray-100 -mx-8 -mb-8`

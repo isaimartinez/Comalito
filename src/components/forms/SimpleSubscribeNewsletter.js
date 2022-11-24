@@ -3,7 +3,6 @@ import tw from "twin.macro";
 import {ReactComponent as EmailNewsletterIconBase } from "../../images/email-newsletter-icon.svg"
 import {Container as ContainerBase } from "../misc/Layouts.js"
 import {SectionHeading} from "../misc/Headings.js";
-import {PrimaryButton} from "../misc/Buttons.js";
 
 
 const Container = tw(ContainerBase)`flex bg-[#eeda86] -mx-8`

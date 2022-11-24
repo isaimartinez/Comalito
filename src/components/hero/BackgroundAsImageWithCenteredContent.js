@@ -6,9 +6,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import Header, { NavLink, NavLinks, PrimaryLink as PrimaryLinkBase, LogoLink, NavToggle, DesktopNavLinks } from "../headers/light.js";
 
 //  ============= PICs =============
-import morro from '../../assets/portada.jpeg'
-// import morro from '../../assets/hero.png'
-import logo from "../../assets/logo.png";
+import {logo, morro} from '../../assets/index'
 
 const StyledHeader = styled(Header)`
   ${tw`pt-8 max-w-none w-full`}
