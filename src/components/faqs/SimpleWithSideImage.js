@@ -4,8 +4,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.js";
-import { ReactComponent as PlusIcon } from "feather-icons/dist/icons/plus.svg";
-import { ReactComponent as MinusIcon } from "feather-icons/dist/icons/minus.svg";
+import {FaPlus, FaMinus} from 'react-icons/fa'
 
 // =============== PICS ===============
 import faq from '../../assets/faq.jpeg'
@@ -111,7 +110,7 @@ export default ({
                     <Question>
                       <QuestionText>{faq.question}</QuestionText>
                       <QuestionToggleIcon>
-                        {activeQuestionIndex === index ? <MinusIcon /> : <PlusIcon />}
+                        {activeQuestionIndex === index ? <FaMinus /> : <FaPlus />}
                       </QuestionToggleIcon>
                     </Question>
                     <Answer

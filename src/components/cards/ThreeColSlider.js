@@ -4,11 +4,7 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { SectionHeading } from "../misc/Headings";
 import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons";
-import { ReactComponent as PriceIcon } from "feather-icons/dist/icons/dollar-sign.svg";
-import { ReactComponent as LocationIcon } from "feather-icons/dist/icons/map-pin.svg";
-import { ReactComponent as StarIcon } from "feather-icons/dist/icons/star.svg";
-import { ReactComponent as ChevronLeftIcon } from "feather-icons/dist/icons/chevron-left.svg";
-import { ReactComponent as ChevronRightIcon } from "feather-icons/dist/icons/chevron-right.svg";
+import {FaArrowRight, FaArrowLeft} from 'react-icons/fa'
 
 
 
@@ -163,8 +159,8 @@ export default () => {
         <HeadingWithControl>
           <Heading >Memorias de Trabajo</Heading>
           <Controls>
-            <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
-            <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
+            <PrevButton onClick={sliderRef?.slickPrev}><FaArrowLeft/></PrevButton>
+            <NextButton onClick={sliderRef?.slickNext}><FaArrowRight/></NextButton>
           </Controls>
         </HeadingWithControl>
         <CardSlider ref={setSliderRef} {...sliderSettings}>

@@ -7,8 +7,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
 import logo from "../../assets/logo.png";
-import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
-import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import {FaBars, FaTimes} from 'react-icons/fa'
 
 const Header = tw.header`
   flex justify-between items-center
@@ -109,7 +108,7 @@ export default ({ roundedHeaderButton = false, logoLink, links, className, colla
           {links}
         </MobileNavLinks>
         <NavToggle onClick={toggleNavbar} className={showNavLinks ? "open" : "closed"}>
-          {showNavLinks ? <CloseIcon tw="w-6 h-6" /> : <MenuIcon tw="w-6 h-6" />}
+          {showNavLinks ? <FaTimes tw="w-6 h-6" /> : <FaBars tw="w-6 h-6" />}
         </NavToggle>
       </MobileNavLinksContainer>
     </Header>
