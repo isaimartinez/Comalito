@@ -11,11 +11,6 @@ import Footer from "../components/footers/MiniCenteredFooter.js";
 
 import GlobalStyles from '../styles/GlobalStyles';
 
-import chefIconImageSrc from "../images/chef-icon.svg";
-import celebrationIconImageSrc from "../images/celebration-icon.svg";
-import shopIconImageSrc from "../images/shop-icon.svg";
-
-
 // =============== PICS ===============
 import nosotros from '../assets/nosotros.jpeg'
 import {FaBullseye, FaGem, FaEye} from 'react-icons/fa'
@@ -50,21 +45,18 @@ export default () => {
         }
         cards={[
           {
-            imageSrc: shopIconImageSrc,
             icon: <FaBullseye size={40} color="#6898C3"/>,
             title: "Misión",
             description: "Hacer una oferta cultural de calidad gratuita que permita a niños y jovenes desarrollarse como agentes de cambio.",
             url: ""
           },
           {
-            imageSrc: chefIconImageSrc,
             icon: <FaEye size={40} color="#6898C3"/>,
             title: "Visión",
             description: "Realizar un aporte relecante para el desarrollo humano de infancias en Querétaro.",
             url: ""
           },
           {
-            imageSrc: celebrationIconImageSrc,
             icon: <FaGem size={40} color="#6898C3"/>,
             title: "Valores",
             description: "Nuestros pilares son trabajo en equipo, responsabilidad y justicia social desde una perspectiva sustentable.",
