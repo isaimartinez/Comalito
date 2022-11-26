@@ -5,42 +5,48 @@ import {Container as ContainerBase } from "../misc/Layouts.js"
 import {SectionHeading} from "../misc/Headings.js";
 
 
-const Container = tw(ContainerBase)`flex bg-[#eeda86] -mx-8`
-const Content = tw.div`flex flex-row max-w-screen-xl mx-auto py-20 lg:py-24`;
+const Container = tw.div`flex relative bg-[#eeda86] -mx-8 `
 
 
 const EmailNewsletterIcon = tw(EmailNewsletterIconBase)`flex w-16 h-16 m-auto text-primary-800`
-const HeadingInfoContainer = tw.div`sm:ml-6 mt-6 sm:mt-0`
-const Heading = tw(SectionHeading)`text-gray-100 sm:text-left leading-none`
 
+const TwoColumn = tw.div`flex  w-full flex-col lg:flex-row lg:items-center max-w-screen-xl mx-auto py-20 lg:py-5`;
+
+const TextColumn = tw.div`flex flex-col lg:w-full mt-16 md:mt-0 mx-auto`
+const FormColumn = tw.div`flex items-center justify-center rounded h-[800]` 
+const Info = tw.div`flex items-center justify-center`
+const InfoText = tw.p`text-center text-gray-800`
 
 
 export default () => {
   return (
     <Container id="contacto">
-      <Content>
-          <div className="mt-12 ml-5 lg:mt-10 flex flex-col gap-5 lg:ml-16 w-full sm:w-auto text-white">
-            <div className="flex justify-center items-center align-middle m-auto" style={{marginRight: 10}}>
+      {/* <Content> */}
+        <TwoColumn>
+
+          <TextColumn>
+            <Info>
               <EmailNewsletterIcon />
-              <br />
-            </div>
-            <div className="flex items-center justify-center">
-              <p className="text-center text-gray-400 font-medium text-sm max-w-sm mt-2 sm:mt-1 sm:text-left" style={{fontSize: 25}}>Estamos en la ciudad de Querétaro, Qro., México.</p>
-              <br/>
-            </div>
-            <div className="flex items-center justify-center mt-10 ">
-              <p className="text-center text-gray-800" style={{fontSize: 23}}>contacto@elcomalitocultural.org</p>
-              <br/>
-            </div>
-            <div className="flex items-center justify-center mt-10 ">
-              <p className="text-center text-gray-800" style={{fontSize: 23}}>(442) 5671010</p>
-              <br/>
-            </div>
-          </div>
-          <div className="flex" style={{backgroundColor: "white", borderRadius: 3}}>
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdG1px0HbR_czZOf_b_q7wWBj0zYaiMnqlN3asbMYSEwfYH8Q/viewform?embedded=true" width="640" height="700" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-          </div>
-      </Content>
+
+            </Info>
+            <Info>
+              <InfoText>Estamos en la ciudad de Querétaro, Qro., México.</InfoText>
+            </Info>
+            <Info>
+              <InfoText className="text-center text-gray-800">contacto@elcomalitocultural.org</InfoText>
+            </Info>
+            <Info>
+              <InfoText className="text-center text-gray-800">(442) 5671010</InfoText>
+            </Info>
+          </TextColumn>
+          <FormColumn className="lg:google-form">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdG1px0HbR_czZOf_b_q7wWBj0zYaiMnqlN3asbMYSEwfYH8Q/viewform?embedded=true" 
+              width="640" 
+              height="700" 
+              frameBorder="0" marginHeight="0" marginWidth="0">Cargando…</iframe>
+          </FormColumn>
+        </TwoColumn>
+      {/* </Content> */}
     </Container>
   );
 };

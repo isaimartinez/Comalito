@@ -1,43 +1,34 @@
-import React from "react";
+import React,{useState} from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "../misc/Headings.js";
-import { PrimaryButton as PrimaryButtonBase } from "../misc/Buttons.js";
-import StatsIllustrationSrc from "../../images/stats-illustration.svg";
-import { ReactComponent as SvgDotPattern } from "../../images/dot-pattern.svg";
-
-const Container = tw.div`relative`;
-const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
-const Column = tw.div`w-full max-w-md mx-auto md:max-w-none md:mx-0`;
-const ImageColumn = tw(Column)`md:w-5/12 flex-shrink-0 h-80 md:h-auto relative`;
-const TextColumn = styled(Column)(props => [
-  tw`md:w-7/12 mt-16 md:mt-0`,
-  props.textOnLeft ? tw`md:mr-12 lg:mr-16 md:order-first` : tw`md:ml-12 lg:ml-16 md:order-last`
-]);
-
-const Image = styled.div(props => [
-  `background-image: url("${props.imageSrc}");`,
-  tw`rounded bg-contain bg-no-repeat bg-center h-full`
-]);
+import {c1, c2, c3, c4 } from '../../assets/index'
+import Slider from "react-slick";
+const Container = tw.div`relative bg-[#F1F9FF]`;
+const TwoColumn = tw.div`flex flex-col lg:flex-row lg:items-center justify-between max-w-screen-xl mx-auto py-10 lg:py-12`;
+const TextColumn = tw.div`flex lg:w-auto justify-between max-w-screen-xl mx-auto py-5 lg:py-6  mt-16 md:mt-0 mx-auto`
 const TextContent = tw.div`lg:py-8 text-center md:text-left`;
+
 
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+// const Description = tw.p`mt-4 max-w-xl mx-auto text-center text-sm md:text-base lg:text-lg font-medium leading-relaxed text-secondary-100`;
+const Description = tw.p`max-w-xl text-center mx-auto lg:mx-0 lg:text-left lg:max-w-none leading-relaxed text-sm sm:text-base lg:text-lg font-medium mt-4 text-secondary-100`;
 
-const Statistics = tw.div`flex flex-col items-center sm:block text-center md:text-left mt-4`;
-const Statistic = tw.div`text-left sm:inline-block sm:mr-12 last:mr-0 mt-4`;
-const Value = tw.div`font-bold text-lg sm:text-xl lg:text-2xl text-secondary-500 tracking-wide`;
-const Key = tw.div`font-medium text-primary-700`;
+const Item = tw.div``
 
-const PrimaryButton = tw(PrimaryButtonBase)`mt-8 md:mt-10 text-sm inline-block mx-auto md:mx-0`;
-
-const DecoratorBlob = styled(SvgDotPattern)(props => [
-  tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-primary-500 -z-10`
-]);
+const CardSlider = styled(Slider)`
+  ${tw`mt-10`}
+  .slick-track { 
+    ${tw`flex gap-2`}
+  }
+  .slick-slide {
+    ${tw`h-auto flex items-center justify-center mb-1`}
+  }
+`;
 
 export default ({
   subheading = "Our Track Record",
@@ -47,50 +38,48 @@ export default ({
     </>
   ),
   description = "Somos una red comunitaria que promueve el sano esparcimiento de niños y adolescentes para la generación de acentes de cambio a través de actividades culturales.",
-  primaryButtonText = "Learn More",
-  primaryButtonUrl = "https://timerse.com",
-  imageSrc = StatsIllustrationSrc,
-  imageCss = null,
-  imageContainerCss = null,
-  imageDecoratorBlob = false,
-  imageDecoratorBlobCss = null,
   imageInsideDiv = true,
-  statistics = null,
-  textOnLeft = false
 }) => {
-  // The textOnLeft boolean prop can be used to display either the text on left or right side of the image.
-  //Change the statistics variable as you like, add or delete objects
-  const defaultStatistics = [
-    // {
-    //   key: "Clients",
-    //   value: "2282+"
-    // },
-    // {
-    //   key: "Projects",
-    //   value: "3891+"
-    // },
-    // {
-    //   key: "Awards",
-    //   value: "1000+"
-    // }
-  ];
+  const sliderSettings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    pauseOnHover: true,
+    speed: 500,
+    autoplaySpeed: 2500,
+    swipeToSlide: true,
+    cssEase: "linear"
+  };
 
-  if (!statistics) statistics = defaultStatistics;
-
+  
   return (
     <Container id="nosotros">
-      <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
-        <ImageColumn css={imageContainerCss}>
-          <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vRCcshDAtu5C8ZK-HB9HwKDyz2Tn1erQGJ0kbBUsrfeQWlzQPL8bsPk9VfimwLhMvdT8ND8LZ76Sh2W/embed?start=true&loop=true&delayms=3000" frameborder="0" width="650" height="380" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
-          <TextContent>
-            {subheading && <Subheading>{subheading}</Subheading>}
-            <Heading>{heading}</Heading>
-            <Description>{description}</Description>
-          </TextContent>
-        </TextColumn>
-      </TwoColumn>
+      <TextColumn>
+        <TextContent>
+          {subheading && <Subheading>{subheading}</Subheading>}
+          <Heading>{heading}</Heading>
+          <Description>{description}</Description>
+        </TextContent>
+      </TextColumn>
+      <div>
+        <CardSlider {...sliderSettings}>
+          <div>
+              <img src={c1} />
+          </div>
+          <div>
+              <img src={c2} />
+          </div>
+          <div>
+              <img src={c3} />
+          </div>
+          <div>
+              <img src={c4} />
+          </div>
+        </CardSlider>
+      </div>
     </Container>
   );
 };

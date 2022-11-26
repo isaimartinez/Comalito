@@ -265,10 +265,11 @@ module.exports = {
     fontFamily: {
       display: ['Poppins', 'system-ui'],
       sans: [
+        'Poppins',
         'system-ui',
       ],
-      serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      serif: ['Poppins',,'Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
+      mono: ['Poppins',,'Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
     },
     fontSize: {
       xs: '0.75rem',

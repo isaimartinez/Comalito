@@ -12,7 +12,7 @@ import {faq} from '../../assets/index'
 
 
 
-const Container = tw.div`relative`;
+const Container = tw.div`relative bg-[#F1F9FF]`;
 const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
 
 const TwoColumn = tw.div`flex`;
